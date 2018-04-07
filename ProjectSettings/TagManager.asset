@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cube
   - Lever
+  - Enemy
+  - ToScene3
   layers:
   - Default
   - TransparentFX
