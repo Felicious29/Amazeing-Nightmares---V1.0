@@ -43,6 +43,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+		private Rigidbody rb;
+		[SerializeField] GameObject lever;
 
         // Use this for initialization
         private void Start()
@@ -57,6 +59,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+			rb = GetComponent<Rigidbody> ();
         }
 
 
@@ -84,10 +87,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-			if (Input.GetKeyDown ("r")) {
-				SceneManager.LoadScene ("Scene_02");
+			if (Input.GetButton ("Fire3") && SceneManager.GetActiveScene().name == "Scene_01" && Vector3.Distance(lever.transform.position, transform.position) < 5) {
+				
+				Invoke ("toScene2", 2);
 			}
         }
+
+		private void toScene2()
+		{
+			SceneManager.LoadScene ("Scene_02");
+		}
+
 
 
         private void PlayLandingSound()

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4967457886429506}
   - component: {fileID: 33810787910172516}
   - component: {fileID: 23185185688283544}
+  - component: {fileID: 65467549430617098}
   m_Layer: 0
   m_Name: bookcasePrefab
   m_TagString: Untagged
@@ -80,3 +81,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816053723379398}
   m_Mesh: {fileID: 4300000, guid: f32cea1b96d5e0747b7f3b19f55a2fd5, type: 3}
+--- !u!65 &65467549430617098
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816053723379398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45972392, y: 0.8326649, z: 20.107437}
+  m_Center: {x: 0.00000000745058, y: -0.00000005960465, z: 10.103701}

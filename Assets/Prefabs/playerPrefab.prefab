@@ -23,9 +23,11 @@ GameObject:
   - component: {fileID: 114510317856280644}
   - component: {fileID: 54081273101134618}
   - component: {fileID: 82685397429871030}
+  - component: {fileID: 136253850068201316}
+  - component: {fileID: 114469303354620622}
   m_Layer: 0
   m_Name: playerPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +261,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -272,6 +274,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114469303354620622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055615049374298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0b292e82540de43a7d183a83ae9b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 5
+  boxMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &114510317856280644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,6 +391,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  toNextLevelLever: {fileID: 0}
 --- !u!114 &114974342932595964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,6 +414,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494609883420374}
   m_Enabled: 1
+--- !u!136 &136253850068201316
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055615049374298}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143968629857688952
 CharacterController:
   m_ObjectHideFlags: 1
